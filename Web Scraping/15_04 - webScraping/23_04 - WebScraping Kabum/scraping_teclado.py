@@ -27,18 +27,28 @@ time.sleep(5)
 
 # Dicionário para inserir os títulos e preços
 dic_produtos = {
-    'Título': [],
+    'Teclados mecânicos': [],
     'Preço': []
 }
 
 # Inicia na pág 1, incrementa a cada troca de pág
 pag = 1
 
-# Filtra os produtos pelos que possuem frete grátis
+# Filtra os teclados com switch azul
 try:
-    btn_frete = WebDriverWait(executador, 5).until(
-        ec.element_to_be_clickable((By.CLASS_NAME, ''))
+    btn_checkBox = WebDriverWait(executador, 5).until(
+        ec.element_to_be_clickable((By.XPATH, "//input[@type='checkbox' and @value='Blue']"))
     )
+    if btn_checkBox:
+            executador.execute_script('arguments[0].click();', btn_checkBox)
+            print('---- Filtrando os teclados para os que tem switch azul ----')
+            time.sleep(5)
+    else:
+        print('Não há check box com esse valor :/')
+except Exception as e:
+    print('Erro ao localizar a checkbox', e)
+
+
 
 # Coleta os dados
 while True:
@@ -58,10 +68,9 @@ while True:
         try:
             nome = produto.find_element(By.CLASS_NAME, 'nameCard').text.strip()
             preco = produto.find_element(By.CLASS_NAME, 'priceCard').text.strip()
-
             print(f'{nome} - {preco}')
 
-            dic_produtos['Título'].append(nome)
+            dic_produtos['Teclados mecânicos'].append(nome)
             dic_produtos['Preço'].append(preco)
         
         except Exception:
