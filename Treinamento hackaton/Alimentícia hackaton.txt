@@ -1,0 +1,16 @@
+ A margem de lucro da empresa caiu nos últimos dois trimestres, embora o volume de vendas tenha
+se mantido estável. Há suspeitas de aumento nos custos fixos e variáveis, mas os relatórios internos
+não apontam claramente a origem dos desvios
+
+Como estão distribuídas as despesas mensais por área (RH, transporte, comercial...)?
+Quais áreas têm maior custo com pessoal, materiais, logística? 
+Qual o perfil de gastos nos últimos trimestres? Alguma sazonalidade? 
+Há fornecedores ou categorias com variações anormais de custo?
+
+
+
+
+
+
+
+Gancho - visto isso - explicação do problema - explicação das etapas da análise de dados - explicação do processo em andamento - explicação da análise + estudo de redução de custo + em outros setores
